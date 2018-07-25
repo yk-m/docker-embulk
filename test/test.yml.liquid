@@ -1,0 +1,42 @@
+in:
+  type: file
+  path_prefix: /test/test.csv
+  parser:
+    charset: UTF-8
+    newline: LF
+    type: csv
+    delimiter: ','
+    quote: '"'
+    escape: ''
+    trim_if_not_quoted: false
+    allow_extra_columns: false
+    allow_optional_columns: false
+    columns:
+    - {name: col01, type: string}
+    - {name: col02, type: string}
+    - {name: col03, type: string}
+    - {name: col04, type: string}
+    - {name: col05, type: string}
+    - {name: col06, type: string}
+    - {name: col07, type: string}
+    - {name: col08, type: string}
+    - {name: col09, type: string}
+    - {name: col10, type: string}
+    - {name: col11, type: string}
+    - {name: col12, type: string}
+    - {name: col13, type: string}
+    - {name: col14, type: string}
+    - {name: col15, type: string}
+    - {name: col16, type: string}
+    - {name: col17, type: string}
+    - {name: col18, type: string}
+    - {name: col19, type: string}
+    - {name: col20, type: string}
+out:
+  type: mysql
+  host: db
+  user: bulkload
+  password: bulkload
+  database: bulkload
+  table: bulk_tbl
+  mode: insert
